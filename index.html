@@ -4,9 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-<body style="background-color: rgba(0, 0, 0, 0.331);">
-    
-    <script src="index.js"></script>
+<body style="background-color: #212121;color: azure;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+       
+    </div>
+    <script>
+        let main=document.querySelector(".parent")
+        //it returns the main div
+       console.log(main)
+        //it returns the child in html collection
+       console.log(main.children)
+        //it returns the text inside first child
+       console.log(main.children[0].innerText)
+        
+         for(let i=0;i<main.children.length;i++)
+         {
+        console.log(main.children[i].innerText)
+        }
+
+        //by this you can change the property of children
+        main.children[0].style.color="red"
+        main.children[1].style.color="white"
+        main.children[2].style.color="blue"
+        main.children[3].style.color="green"
+
+        console.log(main.firstElementChild)
+        console.log(main.lastElementChild)
+
+////it gives the first child
+const firstchild=document.querySelector(".day")
+console.log(firstchild)
+////it gives the parent of children
+console.log(firstchild.parentElement)
+////it give the shibling
+console.log(firstchild.nextElementSibling)
+//it gives the Node list which is a tree structure like it also include text spaces
+console.log(main.childNodes)
+
+const div=document.createElement("div")
+div.className="main";
+div.id=Math.round((Math.random()*10))
+div.setAttribute("title","generated title")
+div.style.backgroundColor="green"
+div.style.padding="10px"
+div.innerText="sucesfully created new element"
+console.log(div)
+////sucessfully added the created element in the page
+document.body.appendChild(div)
+
+    </script>
 </body>
 </html>

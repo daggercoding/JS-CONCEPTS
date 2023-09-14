@@ -121,3 +121,4 @@ let output=numbers.forEach((num)=>
         
 })
 console.log(reslt)
+
