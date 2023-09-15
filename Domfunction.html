@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom function</title>
+</head>
+<body style="background-color: #212121;color:white">
+    <ul id="list">
+        <li>java script</li>
+    </ul>
+    <script>
+        function createlist(newCourse){
+        const li=document.createElement("li");
+        li.innerHTML=`${newCourse}`
+        const parent=document.querySelector("#list")
+        li.style.color="red"
+        parent.appendChild(li)
+        }
+        createlist("python")
+        createlist("vishal singh")
+
+        function createOptimisedlist(newCourse){
+        const li=document.createElement("li");
+        li.appendChild(document.createTextNode(`${newCourse}`))
+        document.querySelector("#list").appendChild(li)
+        }
+
+        createOptimisedlist("c++")
+        createOptimisedlist("pyton")
+
+    </script>
+</body>
+</html>

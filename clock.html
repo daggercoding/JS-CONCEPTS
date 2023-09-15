@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<body style="background-color: #212121;">
+<div class="container" style="display: flex;flex-direction: column;align-items: center;margin-top: 30vh;font-family:Verdana, Geneva, Tahoma, sans-serif;">
+<h1 style="color:green;text-decoration: underline;font-size:50px;">world clock</h1>
+<div id="clock" style="border: 1px solid red;border-radius: 10px;padding: 10px;color: bisque;font-size: x-large;"></div>
+    </div>
+
+<script>
+    const data=document.getElementById("clock")
+    setInterval(function(){
+
+     let date=new Date();
+     data.innerHTML=date.toLocaleTimeString();
+     
+    },1000);
+
+    
+</script>
+</body>
+</html>

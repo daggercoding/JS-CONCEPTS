@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color changing</title>
+    <link rel="stylesheet" href="project.css">
+</head>
+<body>
+    <h1>color switching by clicking on button</h1>
+    <div class="container">
+    <button class="button" id="black"></button>
+    <button class="button" id="green"></button>
+    <button class="button" id="purple"></button>
+    <button class="button" id="orange"></button>
+    <button class="button" id="yellow"></button>
+    <button class="button" id="red"></button>
+    </div>
+    <script>
+        const button=document.querySelectorAll(".button")
+        
+        button.forEach((button)=>{
+
+         button.addEventListener("click",(e)=>
+         {
+            switch(e.target.id)
+            {
+                case "black":
+                const body=document.querySelector("body")
+                body.style.backgroundColor=e.target.id;
+                body.style.color="white"
+                break;
+                case "green":
+                document.querySelector("body").style.backgroundColor=e.target.id
+                document.querySelector("body").style.color="black"
+                break;
+                case "purple":
+                document.querySelector("body").style.backgroundColor=e.target.id
+                document.querySelector("body").style.color="black"
+                break;
+                case "orange":
+                document.querySelector("body").style.backgroundColor=e.target.id
+                document.querySelector("body").style.color="black"
+                break;
+                case "yellow":
+                document.querySelector("body").style.backgroundColor=e.target.id
+                document.querySelector("body").style.color="black"
+                break;
+                case "red":
+                document.querySelector("body").style.backgroundColor=e.target.id
+                document.querySelector("body").style.color="black"
+                break;
+            }
+         })
+        })
+    </script>
+</body>
+</html>
