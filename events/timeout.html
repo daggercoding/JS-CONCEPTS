@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+</head>
+<body>
+    <h1 id="head">REACT VISHAL</h1>
+    <button id="btn">stop</button>
+    <script>
+        //it is used to set the interval for the code to be executed
+        setTimeout(function(){
+            console.log("vishal singh is my name")
+        },5000)
+        //we can directly set pass the predefined function name in the setTimeout function
+        const print=function()
+        {
+            console.log("i am defined ouside setTimeout")
+        }
+        const deact=setTimeout(print,10000)
+        //we can also deactivate the setTimeour according to our need
+        const btn=document.getElementById("btn")
+        btn.addEventListener("click",function(){
+            //now the second timeout function stop working after we click on the button
+        clearTimeout(deact)
+        console.log("deactivated the second timeout function")
+        })
+        
+    </script>
+</body>
+</html>
