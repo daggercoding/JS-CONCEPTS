@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color:green;display: flex;align-items: center;flex-direction: column;margin-top: 35vh;">
+    <h1 id="head">setInterval</h1>
+    <button id="btn1" style="padding: 10px;margin: 10px;">Start</button>
+    <button id="btn2" style="padding: 10px;margin: 10px;">Stop</button>
+    <script>
+
+    const btn1=document.querySelector("#btn1")
+    const btn2=document.querySelector("#btn2")
+    
+   const sayhi= function(str){
+        console.log(`${str} is the king`)
+       }
+    //you can pass three parameter function|time|string
+    const final=setInterval(sayhi,1000,"vishal")  
+
+
+    btn1.addEventListener("click",()=>{
+        console.log("hi vishal singh")
+    })
+
+    btn2.addEventListener("click",function(){
+        clearInterval(final)
+        console.log("auto greeting off")
+        
+    })
+    </script>  
+    
+</body>
+</html>

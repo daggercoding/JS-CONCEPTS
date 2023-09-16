@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color:green;display: flex;align-items: center;flex-direction: column;margin-top: 35vh;">
+    <h1 style="font-size: 30px;">DISCO LIGHT</h1>
+    <button id="btn1"style="padding: 10px;margin: 10px;border-radius:10px;border:1.5px solid red">START</button>
+    <button id="btn2"style="padding: 10px;margin: 10px;border-radius:10px;border:1.5px solid red">STOP</button>
+    <script>
+        let referance;
+        //generating random color code
+        function randomColor(){
+            const hex="0123456780ABCDEF"
+            let color="#"
+            for(let i=0;i<6;i++)
+            {
+              color+=hex[Math.floor(Math.random()*16)]
+            }
+            return color
+        }
+        //startig the background color change
+        let start=document.querySelector("#btn1")
+        start.addEventListener("click",function(){
+            referance=setInterval(function(){
+               document.querySelector("body").style.backgroundColor=randomColor();
+            },100)
+        })
+
+      //stop the set interval
+        let stop=document.querySelector("#btn2")
+        stop.addEventListener("click",function()
+        {
+            clearInterval(referance);
+            document.querySelector("body").style.backgroundColor="#212121";
+            
+        })
+      
+    </script>
+    
+</body>
+</html>
